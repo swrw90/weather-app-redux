@@ -16,10 +16,15 @@ class Weather extends React.Component {
         });
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+
+    }
+
     render() {
         return (
             <main>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <input onChange={this.handleChange}
                         type="text"
                         name="location"
