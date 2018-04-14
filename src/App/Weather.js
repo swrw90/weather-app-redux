@@ -1,12 +1,17 @@
 import React from 'react';
 
 
-function Weather() {
-    return (
-        <div>
-            Weather
-    </div>
-    );
+class Weather extends React.Component {
+    render() {
+        return (
+            <main>
+                <form>
+                    <input type="text" />
+                    <button>Get Weather</button>
+                </form>
+            </main>
+        );
+    }
 }
 
 export default Weather;
