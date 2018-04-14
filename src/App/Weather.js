@@ -10,8 +10,10 @@ class Weather extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange() {
-
+    handleChange(e) {
+        this.setState({
+            location: e.target.value
+        });
     }
 
     render() {

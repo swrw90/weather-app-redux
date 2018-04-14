@@ -1,15 +1,12 @@
 import React from 'react';
-import Header from './App/Header';
-import Weather from './App/Weather';
+import ReactDOM from 'react-dom';
+import Provider from 'react-redux';
+import App from './App/index.js';
+import './styles.css';
+import store from './Redux';
 
-
-function App() {
-  return (
-    <div>
-      <Header />
-      <Weather />
-    </div>
-  );
-}
-
-export default App;
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root'));
