@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { getWeatherData } from '../Redux';
+import { connect } from 'react-redux';
 
 class Weather extends React.Component {
     constructor() {
@@ -18,7 +19,7 @@ class Weather extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-
+        getWeatherData(this.state.location);
     }
 
     render() {
@@ -37,4 +38,4 @@ class Weather extends React.Component {
     }
 }
 
-export default Weather;
+export default connect()(Weather);
