@@ -9,6 +9,8 @@ class Weather extends React.Component {
             location: ""
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
 
     handleChange(e) {
@@ -19,7 +21,7 @@ class Weather extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        getWeatherData(this.state.location);
+        this.props.getWeatherData(this.state.location);
     }
 
     render() {
@@ -38,4 +40,4 @@ class Weather extends React.Component {
     }
 }
 
-export default connect()(Weather);
+export default connect(state => state, { getWeatherData })(Weather);
