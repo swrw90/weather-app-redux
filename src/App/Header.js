@@ -3,9 +3,9 @@ import React from 'react';
 
 function Header() {
   return (
-    <div>
-      Header
-    </div>
+    <header>
+     <h2>Weather Finder</h2> 
+    </header>
   );
 }
 
